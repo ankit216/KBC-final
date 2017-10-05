@@ -15,7 +15,7 @@ class GameXls {
 
 
     public void read() throws IOException, InterruptedException {
-        String excelFilePath = "/home/ankit/Downloads/KbcData.xlsx";
+        String excelFilePath = "/media/ankit/VIRAL/Ankit/Aknit/KbcData.xlsx";
         FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
         Workbook workbook = new XSSFWorkbook(inputStream);
         Sheet firstSheet = workbook.getSheetAt(0);
@@ -70,10 +70,10 @@ class GameXls {
             for (; j < 5; j++) {
                 System.out.println(al1.get(n).get(j));
             }
-            System.out.println(al1.get(n).get(5));
+            //System.out.println(al1.get(n).get(5));
 if(i<=10){
     int x=45;
-    System.out.println( " Enter your answer within 45 seconds: " );
+    System.out.println( "\n"+" Enter your answer within 45 seconds: " );
     BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     long startTime = System.currentTimeMillis();
     while ((System.currentTimeMillis() - startTime) < x * 1000
