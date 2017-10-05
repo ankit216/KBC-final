@@ -15,7 +15,7 @@ class GameXls {
 
 
     public void read() throws IOException, InterruptedException {
-        String excelFilePath = "/media/ankit/VIRAL/Ankit/Aknit/KbcData.xlsx";
+        String excelFilePath = "/media/ankit/VIRAL/Ankit/Aknit/src/test/java/Ankit/KbcData.xlsx";
         FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
         Workbook workbook = new XSSFWorkbook(inputStream);
         Sheet firstSheet = workbook.getSheetAt(0);
