@@ -1,4 +1,5 @@
 package Ankit;
+import org.apache.poi.ss.formula.functions.Now;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.*;
@@ -46,9 +47,11 @@ class GameXls {
             //System.out.println(al);
             al1.add(al);
         }
-
+        Calendar cl = Calendar.getInstance();
+        System.out.println(cl.getTime());
         Scanner scanner = new Scanner(System.in);
-        System.out.println("\n" + "देवियों और सज्जनों...'कौन बनेगा करोड़पति' में आपका स्वागत" + "\n");
+        System.out.println();
+        System.out.println((char)27 + "[33m देवियों और सज्जनों...'कौन बनेगा करोड़पति' में आपका स्वागत" + "\n"+(char)27+ "[0m");
         Scanner scr = new Scanner(System.in);
         System.out.println("Enter Your Full Name If You Have");
         String name = scr.nextLine();
@@ -88,8 +91,6 @@ if(i<=10){
 else {
     System.out.println("No Time Limit");
 }
-
-
                 String answer = scanner.nextLine();
                 System.out.println("Lock किया-जाए ? " + "\n" + "[ Y / N ]");
                 String yesNo = scanner.nextLine();
@@ -130,15 +131,15 @@ else {
 
                 } else if (yesNo.toLowerCase().equals("y")) {
 
-                    if (answer.toUpperCase().equals(al1.get(n).get(5)) || yesNo.toUpperCase().equals(al1.get(n).get(5))
-                            || conform.toUpperCase().equals(al1.get(n).get(5))) {
+                    if (answer.toUpperCase().equals(al1.get(n).get(5))/* || yesNo.toUpperCase().equals(al1.get(n).get(5))
+                            || conform.toUpperCase().equals(al1.get(n).get(5))*/) {
 
                         System.out.println(" [         Right Answer     ]" + "\n" + "\n" +
                                 "Total Win Price is :        " + arr.get(i - 1) + "\n");
 
 
                     } else {
-                        System.out.println("[  Wrong Answer  ]!==Right Answer is " + al1.get(n).get(5) + "\n" + "Try Next Yeay");
+                        System.out.println("\u001B[31m"+"[  Wrong Answer  ]!==Right Answer is " + al1.get(n).get(5) + "\n" + "TRY Next Yeay");
                         if (i == 6 || i == 7 || i == 8 || i == 9) {
                             System.out.println("You final wining amount is : 10,000-Rupee ");
                         } else if (i == 10 || i == 11 || i == 12 || i == 13 || i == 14) {
